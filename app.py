@@ -189,11 +189,10 @@ def write_content4turbo(team1,team2,league_name,day_of_week_vi,date_dmy,time_hm,
             
         )
         return completion.choices[0].message.content
-@app.route("/")
-def hello_world():
-    return "<p>{}</p>".format(key)
-@app.route('/match_analysis', methods=['POST'])
-
+#@app.route("/")
+#def hello_world():
+    #return "<p>{}</p>".format(key)
+@app.route('/analysis', methods=['POST'])
 def match_analysis():
     data = request.json
     match_id = data['id']  # Default to empty string if 'id' not provided
